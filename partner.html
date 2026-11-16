@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Work with us — OBIK</title>
+  <meta name="description" content="OBIK coordinates practical care, financial support, and health access for women aged 65+ across Africa — with families, communities, and partners on the ground." />
+  <link rel="icon" href="images/logo.jpeg" type="image/jpeg" />
+
+  <!-- Google Fonts: Cormorant Garamond (Editorial Display) & Plus Jakarta Sans (Clean UI/Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            editorial: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+          },
+          colors: {
+            // 60% Primary Ground: Crisp Diamond Pearl-White & Soft Rose-Ivory
+            alabaster: '#FDFBFB',
+            linen: '#F6F1F2',
+            linenDeep: '#ECE3E5',
+            stoneBorder: '#E2D6D9',
+            // 30% Institutional Anchor: Deep Plum-Burgundy & Dark Aubergine (Left Facets & Silhouette)
+            emerald: {
+              DEFAULT: '#4D1628',
+              dark: '#320C19',
+              mid: '#6B2138',
+              tint: '#F7EBEE',
+            },
+            sage: {
+              DEFAULT: '#822B46',
+              light: '#F5E8EC',
+            },
+            charcoal: {
+              DEFAULT: '#221016',
+              muted: '#574249',
+              subtle: '#78636A',
+            },
+            // 10% Vibrant Accents: Burnt Vermilion-Orange & Warm Tangerine-Amber (Right Facets)
+            terracotta: {
+              DEFAULT: '#D9501E',
+              hover: '#BD3F12',
+              tint: '#FDF0EB',
+            },
+            marigold: {
+              DEFAULT: '#F28C28',
+              light: '#FEF4E8',
+            },
+          },
+          boxShadow: {
+            card: '0 4px 22px -2px rgba(77, 22, 40, 0.06), 0 1px 3px 0 rgba(34, 16, 22, 0.03)',
+            soft: '0 18px 42px -10px rgba(77, 22, 40, 0.14)',
+            float: '0 26px 64px -15px rgba(50, 12, 25, 0.24)',
+          },
+        },
+      },
+    };
+  </script>
+  <script>
+    try {
+      if (sessionStorage.getItem('obik-opened')) document.documentElement.classList.add('obik-skip-loader');
+    } catch (e) {}
+  </script>
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+<body data-page="partner" class="min-h-screen flex flex-col selection:bg-terracotta selection:text-alabaster">
+
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <div
+    id="ob-loader"
+    role="status"
+    aria-live="polite"
+    aria-label="Loading OBIK — Advancing women's ageing and wellbeing"
+    class="fixed inset-0 z-[100] bg-alabaster flex flex-col items-center justify-center px-6 overflow-hidden"
+  >
+    <div class="absolute -top-28 -right-28 w-[420px] h-[420px] rounded-full bg-sage/12 blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-28 -left-28 w-[420px] h-[420px] rounded-full bg-marigold/14 blur-3xl pointer-events-none"></div>
+
+    <div class="relative flex flex-col items-center text-center max-w-md w-full space-y-7">
+      <div class="relative w-56 h-56 sm:w-64 sm:h-64 flex items-center justify-center">
+        <svg class="absolute inset-0 w-full h-full loader-orbit-spin" viewBox="0 0 240 240" fill="none" aria-hidden="true">
+          <circle cx="120" cy="120" r="96" stroke="#822B46" stroke-opacity="0.32" stroke-width="1.75" stroke-dasharray="6 8" />
+          <circle cx="120" cy="120" r="72" stroke="#D9501E" stroke-opacity="0.38" stroke-width="1.25" stroke-dasharray="3 7" />
+        </svg>
+
+        <div title="Compassionate Care &amp; Dignity" class="loader-icon-bob-1 absolute -top-1 left-1/2 w-12 h-12 rounded-2xl bg-alabaster border border-stoneBorder shadow-card flex items-center justify-center text-terracotta">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 13.5c-2.2-1.7-4.2-3.4-4.2-5.4a2.4 2.4 0 0 1 4.2-1.6 2.4 2.4 0 0 1 4.2 1.6c0 2-2 3.7-4.2 5.4Z" fill="#D9501E" fill-opacity="0.18" />
+            <path d="M4.5 14.5c1.5 2.5 4.2 4.5 7.5 4.5s6-2 7.5-4.5" />
+            <path d="M3.5 12.5c1.3 1.2 2.8 2 4.5 2" />
+            <path d="M20.5 12.5c-1.3 1.2-2.8 2-4.5 2" />
+          </svg>
+        </div>
+
+        <div title="Family &amp; Home Support" class="loader-icon-bob-2 absolute top-1/2 -right-1 w-12 h-12 rounded-2xl bg-alabaster border border-stoneBorder shadow-card flex items-center justify-center text-emerald">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 10.5 12 3l9 7.5" />
+            <path d="M5.5 9.5V19a1.5 1.5 0 0 0 1.5 1.5h10A1.5 1.5 0 0 0 18.5 19V9.5" />
+            <path d="M12 16.5c-1.5-1.15-2.8-2.3-2.8-3.65a1.65 1.65 0 0 1 2.8-1.15 1.65 1.65 0 0 1 2.8 1.15c0 1.35-1.3 2.5-2.8 3.65Z" fill="#822B46" fill-opacity="0.22" />
+          </svg>
+        </div>
+
+        <div title="Senior Mobility &amp; Golden Years" class="loader-icon-bob-3 absolute -bottom-1 left-1/2 w-12 h-12 rounded-2xl bg-alabaster border border-stoneBorder shadow-card flex items-center justify-center text-marigold">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M9.5 20V8.2a2.7 2.7 0 0 1 5.4 0v.8" stroke="#4D1628" />
+            <path d="M8.3 20h2.4" stroke="#4D1628" />
+            <circle cx="17.5" cy="14.5" r="2.3" fill="#F28C28" fill-opacity="0.3" stroke="#F28C28" />
+            <path d="M17.5 10.5v.8M17.5 17.7v.8M13.5 14.5h.8M20.7 14.5h.8" stroke="#F28C28" />
+          </svg>
+        </div>
+
+        <div title="Health Access &amp; Wellbeing" class="loader-icon-bob-4 absolute top-1/2 -left-1 w-12 h-12 rounded-2xl bg-alabaster border border-stoneBorder shadow-card flex items-center justify-center text-sage">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 3.5 5 6.5v5.5c0 4.6 3 8.4 7 9.5 4-1.1 7-4.9 7-9.5V6.5l-7-3Z" fill="#822B46" fill-opacity="0.14" />
+            <path d="M12 9v6M9 12h6" stroke="#D9501E" stroke-width="2" />
+          </svg>
+        </div>
+
+        <div class="loader-emblem-pulse relative w-32 h-32 sm:w-36 sm:h-36 rounded-3xl bg-alabaster flex items-center justify-center border-4 border-alabaster shadow-soft p-3 sm:p-4">
+          <img
+            src="images/logo.jpeg"
+            alt="OBIK — Advancing women's ageing and wellbeing"
+            class="brand-logo w-full h-full"
+            width="144"
+            height="144"
+          />
+        </div>
+      </div>
+
+      <div class="space-y-2.5 w-full">
+        <p class="font-editorial text-2xl sm:text-3xl font-bold text-charcoal leading-tight">
+          Advancing women's <span class="text-terracotta italic font-semibold">ageing and wellbeing.</span>
+        </p>
+        <p id="ob-loader-status" class="text-xs sm:text-sm font-semibold text-charcoal-muted tracking-wide">
+          Preparing dignified care pathways...
+        </p>
+        <div class="w-56 sm:w-64 mx-auto h-1.5 rounded-full bg-linenDeep overflow-hidden mt-3">
+          <div
+            id="ob-loader-bar"
+            class="h-full rounded-full bg-gradient-to-r from-emerald via-terracotta to-marigold transition-all duration-300 ease-out"
+            style="width: 18%;"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="fixed top-0 left-0 right-0 h-[2px] z-[60] bg-transparent pointer-events-none">
+    <div id="scroll-progress" class="h-full bg-terracotta/90 transition-all duration-150" style="width: 0%;"></div>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- STICKY FROSTED HEADER & NAVIGATION                                    -->
+  <!-- ===================================================================== -->
+  <header class="sticky top-0 z-50 bg-alabaster/95 backdrop-blur-sm border-b border-stoneBorder/80">
+    <div class="site-bar max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 min-h-16 sm:min-h-20 flex items-center justify-between gap-2 sm:gap-3">
+      
+      <!-- Brand Identity -->
+      <a href="index.html" class="site-brand flex items-center gap-2.5 sm:gap-3 min-w-0 text-left group focus:outline-none" aria-label="OBIK Home">
+        <img
+          src="images/logo.jpeg"
+          alt=""
+          class="brand-logo w-10 h-10 sm:w-11 sm:h-11 shrink-0 rounded-xl bg-alabaster"
+          width="44"
+          height="44"
+        />
+        <div class="site-brand-text hidden sm:block leading-tight min-w-0">
+          <span class="block font-editorial font-bold text-xl text-charcoal">OBIK</span>
+          <span class="site-tagline hidden lg:block text-xs text-charcoal-subtle mt-0.5">Care for women 65+</span>
+        </div>
+      </a>
+
+      <nav class="site-nav" aria-label="Main Navigation">
+        <a data-nav="home" href="index.html" class="nav-link">Home</a>
+        <a data-nav="about" href="about.html" class="nav-link">About</a>
+        <a data-nav="programmes" href="programmes.html" class="nav-link">Programmes</a>
+        <a data-nav="gallery" href="gallery.html" class="nav-link">Gallery</a>
+        <a data-nav="partner" href="partner.html" class="nav-link">Work with us</a>
+        <a data-nav="contact" href="contact.html" class="nav-link">Get in touch</a>
+      </nav>
+
+      <a href="partner.html" class="site-cta">Partner With OBIK</a>
+
+      <button id="mobile-menu-btn" type="button" onclick="toggleMobileMenu()" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" class="menu-toggle shrink-0 inline-flex items-center gap-2 px-3.5 py-2.5 rounded-full border border-stoneBorder bg-linen/70 hover:bg-linen text-charcoal text-sm font-semibold">
+        <svg id="hamburger-icon" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h10" />
+        </svg>
+        <span>Menu</span>
+      </button>
+    </div>
+
+    <nav id="mobile-menu" class="nav-panel hidden" aria-label="Main Navigation">
+      <p class="nav-panel-label">Pages</p>
+      <ul class="nav-panel-list">
+        <li>
+          <a data-nav="home" href="index.html" class="mobile-nav-link">
+            <span class="nav-index">01</span>
+            <span class="nav-copy"><strong>Home</strong><small>Ageing with practical help</small></span>
+          </a>
+        </li>
+        <li>
+          <a data-nav="about" href="about.html" class="mobile-nav-link">
+            <span class="nav-index">02</span>
+            <span class="nav-copy"><strong>About OBIK</strong><small>Who we are and why we exist</small></span>
+          </a>
+        </li>
+        <li>
+          <a data-nav="programmes" href="programmes.html" class="mobile-nav-link">
+            <span class="nav-index">03</span>
+            <span class="nav-copy"><strong>Programmes</strong><small>Diaspora, upkeep, and health</small></span>
+          </a>
+        </li>
+        <li>
+          <a data-nav="gallery" href="gallery.html" class="mobile-nav-link">
+            <span class="nav-index">04</span>
+            <span class="nav-copy"><strong>Gallery</strong><small>Moments from the work</small></span>
+          </a>
+        </li>
+        <li>
+          <a data-nav="partner" href="partner.html" class="mobile-nav-link">
+            <span class="nav-index">05</span>
+            <span class="nav-copy"><strong>Work with us</strong><small>Partner or support the work</small></span>
+          </a>
+        </li>
+        <li>
+          <a data-nav="contact" href="contact.html" class="mobile-nav-link">
+            <span class="nav-index">06</span>
+            <span class="nav-copy"><strong>Get in touch</strong><small>Write to the team</small></span>
+          </a>
+        </li>
+      </ul>
+      <a href="partner.html" class="nav-panel-cta">Partner With OBIK</a>
+    </nav>
+  </header>
+
+  <!-- ===================================================================== -->
+  <!-- MAIN CONTENT CONTAINER (6 PAGES)                                      -->
+  <!-- ===================================================================== -->
+  <main id="main-content" class="flex-1">
+    <div id="page-partner" class="page-view active">
+
+      <!-- Work With Us Hero -->
+      <section class="pt-14 pb-20 lg:pt-20 lg:pb-24 bg-linen/55 border-b border-stoneBorder">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10">
+          <div class="grid lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 space-y-5">
+              <span class="section-label text-terracotta">
+                WORK WITH US
+              </span>
+              <h1 class="font-editorial text-4xl sm:text-5xl lg:text-6xl font-bold text-charcoal leading-[1.08]">
+                Stronger support systems are built through collaboration.
+              </h1>
+              <p class="text-base sm:text-lg text-charcoal-muted leading-relaxed">
+                Improving women's ageing and wellbeing requires collaboration across communities, institutions and sectors.
+              </p>
+              <p class="text-base sm:text-lg text-charcoal-muted leading-relaxed">
+                OBIK welcomes partnerships with organisations and individuals who share our commitment to improving the lives of older women. Whether through funding, technical expertise, service delivery or institutional collaboration, there are meaningful ways to contribute.
+              </p>
+            </div>
+            <div class="lg:col-span-5">
+              <div class="rounded-3xl overflow-hidden aspect-[4/3] bg-emerald shadow-soft border border-stoneBorder img-zoom-wrap">
+                <img data-photo="partner-hero" alt="Working together with OBIK" class="w-full h-full object-cover object-top" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Interactive 7 Partner Category Cards + Partnership Inquiry Form -->
+      <section class="py-20 lg:py-28 bg-alabaster border-b border-stoneBorder">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10 space-y-16">
+          
+          <div class="space-y-4">
+            <h2 class="font-editorial text-3xl sm:text-4xl font-bold text-charcoal">
+              We are interested in working with:
+            </h2>
+            <p class="text-sm sm:text-base text-charcoal-muted">
+              Select a partner category below to pre-fill your collaboration inquiry:
+            </p>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-2">
+              <button onclick="selectPartnerCategory('Foundations and development organisations')" class="partner-card-btn text-left p-5 rounded-2xl bg-linen/60 hover:bg-emerald hover:text-alabaster border border-stoneBorder transition-all">
+                <span class="block text-xs font-bold uppercase tracking-wider text-terracotta mb-1">01</span>
+                <span class="font-semibold text-sm">Foundations and development organisations.</span>
+              </button>
+              <button onclick="selectPartnerCategory('Healthcare providers and medical institutions')" class="partner-card-btn text-left p-5 rounded-2xl bg-linen/60 hover:bg-emerald hover:text-alabaster border border-stoneBorder transition-all">
+                <span class="block text-xs font-bold uppercase tracking-wider text-terracotta mb-1">02</span>
+                <span class="font-semibold text-sm">Healthcare providers and medical institutions.</span>
+              </button>
+              <button onclick="selectPartnerCategory('Licensed insurance providers')" class="partner-card-btn text-left p-5 rounded-2xl bg-linen/60 hover:bg-emerald hover:text-alabaster border border-stoneBorder transition-all">
+                <span class="block text-xs font-bold uppercase tracking-wider text-terracotta mb-1">03</span>
+                <span class="font-semibold text-sm">Licensed insurance providers.</span>
+              </button>
+              <button onclick="selectPartnerCategory('Corporate and institutional partners')" class="partner-card-btn text-left p-5 rounded-2xl bg-linen/60 hover:bg-emerald hover:text-alabaster border border-stoneBorder transition-all">
+                <span class="block text-xs font-bold uppercase tracking-wider text-terracotta mb-1">04</span>
+                <span class="font-semibold text-sm">Corporate and institutional partners.</span>
+              </button>
+              <button onclick="selectPartnerCategory('Community-based organisations')" class="partner-card-btn text-left p-5 rounded-2xl bg-linen/60 hover:bg-emerald hover:text-alabaster border border-stoneBorder transition-all">
+                <span class="block text-xs font-bold uppercase tracking-wider text-terracotta mb-1">05</span>
+                <span class="font-semibold text-sm">Community-based organisations.</span>
+              </button>
+              <button onclick="selectPartnerCategory('Philanthropists and individual donors')" class="partner-card-btn text-left p-5 rounded-2xl bg-linen/60 hover:bg-emerald hover:text-alabaster border border-stoneBorder transition-all">
+                <span class="block text-xs font-bold uppercase tracking-wider text-terracotta mb-1">06</span>
+                <span class="font-semibold text-sm">Philanthropists and individual donors.</span>
+              </button>
+              <button onclick="selectPartnerCategory('Diaspora communities and families')" class="sm:col-span-2 partner-card-btn text-left p-5 rounded-2xl bg-linen/60 hover:bg-emerald hover:text-alabaster border border-stoneBorder transition-all">
+                <span class="block text-xs font-bold uppercase tracking-wider text-terracotta mb-1">07</span>
+                <span class="font-semibold text-sm">Diaspora communities and families.</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Partnership & Support Form -->
+          <div id="partner-form-box" class="max-w-3xl mx-auto rounded-3xl bg-linen/65 border border-stoneBorder p-8 sm:p-12 shadow-soft">
+            <div class="space-y-2 mb-8">
+              <span class="text-xs font-bold uppercase tracking-[0.18em] text-terracotta">Partner With OBIK &bull; Support Our Work</span>
+              <h3 class="font-editorial text-3xl sm:text-4xl font-bold text-charcoal">
+                Start a Partnership Conversation
+              </h3>
+              <p class="text-sm sm:text-base text-charcoal-muted">
+                Share how you or your organisation would like to collaborate with OBIK.
+              </p>
+            </div>
+
+            <form id="partner-form" onsubmit="handlePartnerSubmit(event)" class="space-y-5" novalidate>
+              <div class="grid sm:grid-cols-2 gap-5">
+                <div>
+                  <label for="partner-name" class="block text-xs font-bold uppercase tracking-wider text-charcoal mb-2">Full Name *</label>
+                  <input id="partner-name" name="name" type="text" required autocomplete="name" placeholder="Your full name" class="w-full px-4 py-3.5 rounded-xl bg-alabaster border border-stoneBorder focus:border-emerald focus:outline-none text-sm" />
+                </div>
+                <div>
+                  <label for="partner-org" class="block text-xs font-bold uppercase tracking-wider text-charcoal mb-2">Organisation / Family Group</label>
+                  <input id="partner-org" name="organisation" type="text" autocomplete="organization" placeholder="Organisation or community name" class="w-full px-4 py-3.5 rounded-xl bg-alabaster border border-stoneBorder focus:border-emerald focus:outline-none text-sm" />
+                </div>
+              </div>
+
+              <div class="grid sm:grid-cols-2 gap-5">
+                <div>
+                  <label for="partner-email" class="block text-xs font-bold uppercase tracking-wider text-charcoal mb-2">Email Address *</label>
+                  <input id="partner-email" name="email" type="email" required autocomplete="email" placeholder="name@organisation.org" class="w-full px-4 py-3.5 rounded-xl bg-alabaster border border-stoneBorder focus:border-emerald focus:outline-none text-sm" />
+                </div>
+                <div>
+                  <label for="partner-category" class="block text-xs font-bold uppercase tracking-wider text-charcoal mb-2">Partner Category *</label>
+                  <select id="partner-category" name="category" required class="w-full px-4 py-3.5 rounded-xl bg-alabaster border border-stoneBorder focus:border-emerald focus:outline-none text-sm">
+                    <option value="Foundations and development organisations">Foundations and development organisations</option>
+                    <option value="Healthcare providers and medical institutions">Healthcare providers and medical institutions</option>
+                    <option value="Licensed insurance providers">Licensed insurance providers</option>
+                    <option value="Corporate and institutional partners">Corporate and institutional partners</option>
+                    <option value="Community-based organisations">Community-based organisations</option>
+                    <option value="Philanthropists and individual donors">Philanthropists and individual donors</option>
+                    <option value="Diaspora communities and families">Diaspora communities and families</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label for="partner-message" class="block text-xs font-bold uppercase tracking-wider text-charcoal mb-2">How would you like to collaborate? *</label>
+                <textarea id="partner-message" name="message" rows="4" required placeholder="Tell us about your interest in funding, technical expertise, service delivery, or institutional collaboration..." class="w-full px-4 py-3.5 rounded-xl bg-alabaster border border-stoneBorder focus:border-emerald focus:outline-none text-sm"></textarea>
+              </div>
+
+              <p id="partner-error" class="hidden text-sm font-medium text-terracotta" role="alert"></p>
+              <button type="submit" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-emerald hover:bg-emerald-dark text-alabaster font-semibold text-base shadow-soft transition-all">
+                Submit Partnership Inquiry
+              </button>
+
+              <div id="partner-feedback" class="hidden p-4 rounded-2xl bg-emerald-tint border border-emerald/25 text-emerald text-sm font-medium space-y-3" role="status">
+                <p>Your email app should open with this partnership inquiry. Send that email to reach OBIK.</p>
+                <button type="button" onclick="copyLastEnquiry()" class="text-xs font-bold underline underline-offset-2">Copy message instead</button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+  <footer class="bg-emerald-dark text-alabaster">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 py-16 lg:py-20">
+      <div class="grid md:grid-cols-12 gap-10 pb-12 border-b border-alabaster/15">
+        
+        <div class="md:col-span-5 space-y-4">
+          <div class="flex items-center gap-3">
+            <img
+              src="images/logo.jpeg"
+              alt=""
+              class="brand-logo w-10 h-10 rounded-xl bg-alabaster"
+              width="40"
+              height="40"
+            />
+            <span class="font-editorial text-2xl font-bold">OBIK</span>
+          </div>
+          <p class="font-editorial text-xl text-alabaster/90 leading-snug max-w-sm">
+            Practical support for women 65+ — coordinated with the people who know them.
+          </p>
+          <p class="text-sm text-alabaster/75 leading-relaxed max-w-sm">
+            Diaspora care, upkeep &amp; protection, and health access across Africa.
+          </p>
+        </div>
+
+        <div class="md:col-span-3 space-y-3">
+          <h3 class="section-label text-marigold">Navigation</h3>
+          <ul class="space-y-2.5 text-sm text-alabaster/80">
+            <li><a href="index.html" class="hover:text-alabaster transition-colors">Home</a></li>
+            <li><a href="about.html" class="hover:text-alabaster transition-colors">About OBIK</a></li>
+            <li><a href="programmes.html" class="hover:text-alabaster transition-colors">Programmes</a></li>
+            <li><a href="gallery.html" class="hover:text-alabaster transition-colors">Gallery</a></li>
+            <li><a href="partner.html" class="hover:text-alabaster transition-colors">Work With Us</a></li>
+            <li><a href="contact.html" class="hover:text-alabaster transition-colors">Get in Touch</a></li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-4 space-y-3">
+          <h3 class="section-label text-marigold">Our Programmes</h3>
+          <ul class="space-y-2.5 text-sm text-alabaster/80">
+            <li><button onclick="navigateToProgramme('diaspora')" class="hover:text-alabaster transition-colors text-left">1. OBIK Diaspora Care</button></li>
+            <li><button onclick="navigateToProgramme('upkeep')" class="hover:text-alabaster transition-colors text-left">02. OBIK Upkeep &amp; Social Protection</button></li>
+            <li><button onclick="navigateToProgramme('health')" class="hover:text-alabaster transition-colors text-left">03. OBIK Health Access &amp; Mobility</button></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-alabaster/65">
+        <p>&copy; <span id="footer-year"></span> OBIK — Advancing women's ageing and wellbeing. All rights reserved.</p>
+        <p class="text-sm text-alabaster/55">Coordinated care across distances</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="js/site.js"></script>
+</body>
+</html>
