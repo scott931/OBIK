@@ -464,6 +464,16 @@
     // =========================================================================
     const heroHeadlines = [
       {
+        before: 'Aging should not  ',
+        accent: 'mean being left',
+        after: ' behind.',
+      },
+      {
+        before: 'Strengthening the support ',
+        accent: 'systems around',
+        after: ' older women.',
+      },
+      {
         before: 'Growing older with dignity starts with ',
         accent: 'practical help',
         after: ' close to home.',
@@ -483,6 +493,11 @@
         accent: 'distance',
         after: ' and generations.',
       },
+      // {
+      //   before: 'Connecting families across ',
+      //   accent: 'distance',
+      //   after: ' and generations.',
+      // },
     ];
 
     let heroTypingTimer = null;
