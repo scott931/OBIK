@@ -448,6 +448,15 @@
     .site-cta:hover {
       background: #320C19;
     }
+    button.site-cta,
+    button.nav-panel-cta {
+      border: 0;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    button.nav-panel-cta {
+      width: 100%;
+    }
     .menu-toggle {
       min-height: 44px;
     }

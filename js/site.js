@@ -32,8 +32,8 @@
       'gallery-3': { ...sitePhoto(3), label: 'Independence & Care' },
       'about-hero': { ...sitePhoto(3), label: 'Who We Are at OBIK' },
       'founder': {
-        primary: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=850&q=85',
-        secondary: 'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=850&q=85',
+        primary: 'images/dalcy.jpeg',
+        secondary: 'images/dalcy.jpeg',
         label: 'Dalcy C., Founder of OBIK',
       },
       'partner-hero': { ...sitePhoto(1), label: 'Working Together With OBIK' },
