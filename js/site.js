@@ -660,11 +660,11 @@
     }
 
     function navigateToContactTopic(topic) {
-      if (currentFile() === 'contact.html') {
-        setContactTopic(topic);
+      if (currentFile() === 'partner.html') {
+        openPartnerForm();
         return;
       }
-      goToPage('contact', '?topic=' + encodeURIComponent(topic));
+      goToPage('partner', '?inquiry=1');
     }
 
     // =========================================================================
@@ -1203,6 +1203,9 @@
       if (category && document.getElementById('partner-category')) {
         selectPartnerCategory(category);
       }
+      if (params.get('inquiry') === '1' && document.getElementById('partner-form-modal')) {
+        openPartnerForm();
+      }
       const topic = params.get('topic');
       if (topic && document.getElementById('contact-topic')) {
         setContactTopic(topic);
@@ -1238,3 +1241,126 @@
       }
       setTimeout(triggerVisibleReveals, 80);
     });
+
+    (function () {
+      const STORAGE_KEY = 'obik-cookie-consent-v2';
+      const banner = document.getElementById('ob-cookie-banner');
+      const modal = document.getElementById('ob-cookie-modal');
+      const policyModal = document.getElementById('ob-policy-modal');
+
+      const POLICY_TITLES = {
+        privacy: 'Privacy Policy',
+        terms: 'Terms of Use',
+        cookies: 'Cookies Policy'
+      };
+
+      window.switchPolicyTab = function (type) {
+        ['privacy', 'terms', 'cookies'].forEach(function (key) {
+          const tab = document.getElementById('policy-tab-' + key);
+          const panel = document.getElementById('policy-panel-' + key);
+          const active = key === type;
+          if (tab) {
+            tab.setAttribute('aria-selected', active ? 'true' : 'false');
+            tab.classList.toggle('bg-emerald', active);
+            tab.classList.toggle('text-alabaster', active);
+            tab.classList.toggle('bg-linen', !active);
+            tab.classList.toggle('text-charcoal', !active);
+            tab.classList.toggle('hover:bg-linenDeep', !active);
+          }
+          if (panel) {
+            panel.classList.toggle('hidden', !active);
+          }
+        });
+        const titleEl = document.getElementById('ob-policy-modal-title');
+        if (titleEl && POLICY_TITLES[type]) {
+          titleEl.textContent = POLICY_TITLES[type];
+        }
+      };
+
+      window.openPolicyModal = function (type) {
+        if (!policyModal) return;
+        window.switchPolicyTab(type || 'privacy');
+        policyModal.classList.remove('hidden');
+      };
+
+      window.closePolicyModal = function () {
+        if (policyModal) policyModal.classList.add('hidden');
+      };
+
+      function applyConsent(prefs) {
+        try {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify({
+            essential: true,
+            analytics: Boolean(prefs.analytics),
+            preferences: Boolean(prefs.preferences),
+            updatedAt: new Date().toISOString()
+          }));
+        } catch (e) {}
+        if (banner) banner.classList.add('hidden');
+        if (modal) modal.classList.add('hidden');
+      }
+
+      window.acceptAllCookies = function () {
+        applyConsent({ analytics: true, preferences: true });
+      };
+
+      window.rejectOptionalCookies = function () {
+        applyConsent({ analytics: false, preferences: false });
+      };
+
+      window.openCookieModal = function () {
+        try {
+          const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null');
+          if (saved) {
+            document.getElementById('cookie-opt-analytics').checked = Boolean(saved.analytics);
+            document.getElementById('cookie-opt-preferences').checked = Boolean(saved.preferences);
+          }
+        } catch (e) {}
+        if (modal) modal.classList.remove('hidden');
+      };
+
+      window.closeCookieModal = function () {
+        if (modal) modal.classList.add('hidden');
+      };
+
+      window.saveCustomCookies = function () {
+        applyConsent({
+          analytics: document.getElementById('cookie-opt-analytics').checked,
+          preferences: document.getElementById('cookie-opt-preferences').checked
+        });
+      };
+
+      [policyModal, modal].forEach(function (overlay) {
+        if (!overlay) return;
+        overlay.addEventListener('click', function (e) {
+          if (e.target === overlay) overlay.classList.add('hidden');
+        });
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+          if (policyModal) policyModal.classList.add('hidden');
+          if (modal) modal.classList.add('hidden');
+        }
+      });
+
+      // Reliably show the cookie banner when there is no saved consent
+      function showBannerIfNeeded() {
+        if (!banner) return;
+        let hasConsent = false;
+        try {
+          hasConsent = Boolean(localStorage.getItem(STORAGE_KEY));
+        } catch (e) {
+          hasConsent = false;
+        }
+        if (!hasConsent) {
+          banner.classList.remove('hidden');
+        }
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', showBannerIfNeeded);
+      } else {
+        showBannerIfNeeded();
+      }
+    })();
