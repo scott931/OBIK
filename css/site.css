@@ -47,6 +47,22 @@
       max-width: 38rem;
     }
 
+    .pathway-btn.is-active {
+      background-color: #4D1628;
+      color: #FDFBFB;
+      border-color: #4D1628;
+      box-shadow: 0 18px 42px -10px rgba(77, 22, 40, 0.14);
+    }
+    .pathway-btn.is-active .pathway-kicker {
+      color: #F28C28;
+    }
+    .prog-anchor {
+      scroll-margin-top: 5.75rem;
+    }
+    .prog-detail-card.is-active {
+      box-shadow: inset 3px 0 0 #D9501E;
+    }
+
     .btn-primary {
       display: inline-flex;
       align-items: center;

@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Programmes — OBIK</title>
-  <meta name="description" content="OBIK coordinates practical care, financial support, and health access for women aged 65+ across Africa — with families, communities, and partners on the ground." />
+  <meta name="description" content="OBIK addresses aging through three complementary programmes: Diaspora Care, Upkeep &amp; Social Protection, and Health Access &amp; Mobility." />
   <link rel="icon" href="images/logo.jpeg" type="image/jpeg" />
 
   <!-- Google Fonts: Cormorant Garamond (Editorial Display) & Plus Jakarta Sans (Clean UI/Body) -->
@@ -248,161 +248,399 @@
   <main id="main-content" class="flex-1">
     <div id="page-programmes" class="page-view active">
 
-      <!-- Programmes Hero + Interactive Pathway Matcher -->
+      <!-- Programmes Hero + Interactive Tab Triggers -->
       <section class="pt-14 pb-20 lg:pt-20 lg:pb-24 bg-linen/55 border-b border-stoneBorder">
         <div class="max-w-7xl mx-auto px-6 lg:px-10">
           <div class="max-w-3xl space-y-5">
-            <span class="section-label text-terracotta">Programmes</span>
+            <span class="section-label text-terracotta">Our Programmes</span>
             <h1 class="font-editorial text-4xl sm:text-5xl lg:text-[3.25rem] font-bold text-charcoal">
-              Start where the need is clearest.
+              Building better support systems for older women.
             </h1>
-            <p class="text-base sm:text-lg text-charcoal-muted prose-measure">
-              Diaspora care, upkeep &amp; protection, or health &amp; mobility — pick a door. We’ll help you find the rest.
-            </p>
+            <div class="space-y-4 text-base sm:text-lg text-charcoal-muted leading-relaxed">
+              <p>
+                Aging brings different needs at different stages of life. For some women, the challenge is financial insecurity. For others, it is accessing healthcare, maintaining independence, or having someone dependable nearby. For families living far away, ensuring an older loved one receives consistent support can be equally challenging.
+              </p>
+              <p>
+                OBIK addresses these interconnected challenges through three complementary programs: Diaspora Care, Upkeep &amp; Social Protection, and Health Access &amp; Mobility.
+              </p>
+              <p>
+                Each program addresses a different aspect of aging while working toward a shared goal: helping older women live with dignity, independence, security, and access to the support they need.
+              </p>
+            </div>
           </div>
 
-          <!-- Interactive Pathway Matcher -->
-          <div class="mt-10 p-6 sm:p-8 rounded-3xl bg-alabaster border border-stoneBorder shadow-card space-y-5">
+          <nav class="mt-10 p-6 sm:p-8 rounded-3xl bg-alabaster border border-stoneBorder shadow-card space-y-5" aria-label="Jump to a programme">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-              <span class="section-label text-emerald">Find a pathway</span>
-              <span class="text-sm text-charcoal-subtle">Who are you trying to help?</span>
+              <span class="section-label text-emerald">Our Three Programmes</span>
+              <span class="text-sm text-charcoal-subtle">Jump to a programme and read it in full</span>
             </div>
-            <div class="grid sm:grid-cols-3 gap-3.5">
-              <button onclick="highlightPathway('diaspora')" data-pathway="diaspora" class="pathway-btn text-left p-4 rounded-2xl bg-linen/70 hover:bg-emerald hover:text-alabaster border border-stoneBorder transition-all">
-                <span class="block text-sm font-bold">Diaspora or Distant Family</span>
-                <span class="block text-xs opacity-80 mt-1">Coordinating trusted everyday care back home</span>
-              </button>
-              <button onclick="highlightPathway('upkeep')" data-pathway="upkeep" class="pathway-btn text-left p-4 rounded-2xl bg-linen/70 hover:bg-emerald hover:text-alabaster border border-stoneBorder transition-all">
-                <span class="block text-sm font-bold">Older Woman / Social Support</span>
-                <span class="block text-xs opacity-80 mt-1">Benefit-access &amp; sponsored upkeep resources</span>
-              </button>
-              <button onclick="highlightPathway('health')" data-pathway="health" class="pathway-btn text-left p-4 rounded-2xl bg-linen/70 hover:bg-emerald hover:text-alabaster border border-stoneBorder transition-all">
-                <span class="block text-sm font-bold">Healthcare &amp; Medical Mobility</span>
-                <span class="block text-xs opacity-80 mt-1">Appointments, referrals, insurance &amp; transport</span>
-              </button>
+            <div class="grid sm:grid-cols-3 gap-4">
+              <a
+                href="#diaspora"
+                data-pathway="diaspora"
+                class="pathway-btn group text-left p-5 rounded-2xl bg-linen/70 hover:bg-emerald hover:text-alabaster border border-stoneBorder hover:border-emerald hover:shadow-soft transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-terracotta/50"
+              >
+                <div class="flex items-center justify-between gap-2 mb-2">
+                  <span class="pathway-kicker text-[11px] font-bold uppercase tracking-wider text-terracotta group-hover:text-marigold transition-colors">01</span>
+                  <span class="text-xs font-semibold opacity-75 group-hover:opacity-100">Read &rarr;</span>
+                </div>
+                <span class="block text-base sm:text-lg font-bold leading-snug">OBIK Diaspora Care</span>
+                <span class="block text-xs opacity-80 mt-1.5 leading-relaxed">Keeping families connected. Bringing everyday support closer.</span>
+              </a>
+
+              <a
+                href="#upkeep"
+                data-pathway="upkeep"
+                class="pathway-btn group text-left p-5 rounded-2xl bg-linen/70 hover:bg-emerald hover:text-alabaster border border-stoneBorder hover:border-emerald hover:shadow-soft transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-terracotta/50"
+              >
+                <div class="flex items-center justify-between gap-2 mb-2">
+                  <span class="pathway-kicker text-[11px] font-bold uppercase tracking-wider text-terracotta group-hover:text-marigold transition-colors">02</span>
+                  <span class="text-xs font-semibold opacity-75 group-hover:opacity-100">Read &rarr;</span>
+                </div>
+                <span class="block text-base sm:text-lg font-bold leading-snug">OBIK Upkeep &amp; Social Protection</span>
+                <span class="block text-xs opacity-80 mt-1.5 leading-relaxed">Strengthening financial security and independence in later life.</span>
+              </a>
+
+              <a
+                href="#health"
+                data-pathway="health"
+                class="pathway-btn group text-left p-5 rounded-2xl bg-linen/70 hover:bg-emerald hover:text-alabaster border border-stoneBorder hover:border-emerald hover:shadow-soft transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-terracotta/50"
+              >
+                <div class="flex items-center justify-between gap-2 mb-2">
+                  <span class="pathway-kicker text-[11px] font-bold uppercase tracking-wider text-terracotta group-hover:text-marigold transition-colors">03</span>
+                  <span class="text-xs font-semibold opacity-75 group-hover:opacity-100">Read &rarr;</span>
+                </div>
+                <span class="block text-base sm:text-lg font-bold leading-snug">OBIK Health Access &amp; Mobility</span>
+                <span class="block text-xs opacity-80 mt-1.5 leading-relaxed">Making healthcare more accessible, affordable and within reach.</span>
+              </a>
+            </div>
+          </nav>
+        </div>
+      </section>
+
+      <section id="diaspora" class="prog-anchor prog-detail-card py-20 lg:py-28 bg-alabaster border-b border-stoneBorder">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10">
+          <div class="grid lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+            <div class="lg:col-span-4 lg:sticky lg:top-28">
+              <div class="rounded-3xl overflow-hidden aspect-[4/3] bg-emerald shadow-soft border border-stoneBorder img-zoom-wrap">
+                <img data-photo="prog-diaspora" alt="An older woman staying in touch with family through OBIK Diaspora Care" class="w-full h-full object-cover object-top" />
+              </div>
+            </div>
+            <div class="lg:col-span-8 space-y-8">
+              <div class="space-y-4">
+                <span class="inline-block px-3.5 py-1 rounded-full bg-terracotta-tint text-terracotta text-xs font-bold uppercase tracking-wider">01</span>
+                <h2 class="font-editorial text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal">OBIK Diaspora Care</h2>
+                <p class="font-editorial text-2xl sm:text-3xl font-semibold text-emerald leading-snug">Keeping families connected. Bringing everyday support closer.</p>
+                <p class="text-base sm:text-lg text-charcoal font-medium leading-relaxed">Distance should never mean disconnection from the people who matter most.</p>
+              </div>
+              <div class="space-y-4 text-base text-charcoal-muted leading-relaxed">
+                <p>Across Kenya and beyond, many families live far from their older loved ones. Children and relatives may live in different cities, counties, or countries, often relying on phone calls, occasional visits, and financial support to stay involved in their well-being.</p>
+                <p>Yet staying connected is not always the same as knowing whether someone is doing well, whether they need assistance, or whether the support they require is reaching them.</p>
+                <p>An older woman may need help arranging a medical appointment, accessing essential services, attending to everyday needs, or simply having someone dependable to turn to. For families living at a distance, coordinating this support consistently can be difficult.</p>
+                <p>OBIK Diaspora Care is designed to bridge this gap through a connected support system that brings older adults, their families, and trusted local assistance closer together.</p>
+              </div>
+
+              <div class="space-y-5">
+                <h3 class="font-editorial text-3xl font-bold text-charcoal">Our approach</h3>
+                <div class="space-y-4 text-base text-charcoal-muted leading-relaxed">
+                  <p>At the center of this program is the OBIK Connect experience: a simple, accessible, senior-friendly digital platform designed to make communication, family involvement, and everyday support easier for older adults.</p>
+                  <p>Through a dedicated tablet provided as part of the Diaspora Care offering, older adults will have a more accessible way to connect with family, receive messages, share moments, and access available support.</p>
+                  <p>Designed with simplicity and language accessibility in mind, the experience will progressively incorporate Kenyan languages and voice-enabled features, helping older adults interact with technology in ways that feel familiar and natural.</p>
+                  <p>The tablet will be part of a broader ecosystem connecting three key elements: the older adult, their family, and OBIK's local support network.</p>
+                  <p>Through this program, OBIK aims to facilitate:</p>
+                </div>
+                <ul class="grid sm:grid-cols-2 gap-4">
+                  <li class="p-5 rounded-2xl bg-linen/70 border border-stoneBorder">
+                    <p class="font-semibold text-charcoal">Family connection</p>
+                    <p class="text-sm text-charcoal-muted mt-1.5 leading-relaxed">Simple video calls, voice messages, photographs, and shared moments that help older adults maintain meaningful relationships with family members, regardless of distance.</p>
+                  </li>
+                  <li class="p-5 rounded-2xl bg-linen/70 border border-stoneBorder">
+                    <p class="font-semibold text-charcoal">Accessible digital interaction</p>
+                    <p class="text-sm text-charcoal-muted mt-1.5 leading-relaxed">A simplified, senior-friendly tablet experience designed around ease of use, with progressive support for Kenyan languages and voice interaction.</p>
+                  </li>
+                  <li class="p-5 rounded-2xl bg-linen/70 border border-stoneBorder">
+                    <p class="font-semibold text-charcoal">Family involvement and updates</p>
+                    <p class="text-sm text-charcoal-muted mt-1.5 leading-relaxed">A companion digital experience through which authorized family members can stay connected, communicate, and coordinate agreed aspects of their loved one's support.</p>
+                  </li>
+                  <li class="p-5 rounded-2xl bg-linen/70 border border-stoneBorder">
+                    <p class="font-semibold text-charcoal">Wellbeing and everyday support</p>
+                    <p class="text-sm text-charcoal-muted mt-1.5 leading-relaxed">Agreed check-ins and a pathway for older adults or their families to request assistance when everyday needs arise.</p>
+                  </li>
+                  <li class="p-5 rounded-2xl bg-linen/70 border border-stoneBorder">
+                    <p class="font-semibold text-charcoal">Healthcare coordination</p>
+                    <p class="text-sm text-charcoal-muted mt-1.5 leading-relaxed">Support with arranging appointments, medication collection, referrals and other healthcare-related needs where appropriate.</p>
+                  </li>
+                  <li class="p-5 rounded-2xl bg-linen/70 border border-stoneBorder">
+                    <p class="font-semibold text-charcoal">Local assistance and service coordination</p>
+                    <p class="text-sm text-charcoal-muted mt-1.5 leading-relaxed">Connecting families and older adults to appropriate local support, including household assistance, transport and other practical services.</p>
+                  </li>
+                </ul>
+                <p class="text-base text-charcoal-muted leading-relaxed">The digital platform is intended to make communication and coordination easier, while OBIK's local support network helps connect those interactions to practical assistance on the ground.</p>
+              </div>
+
+              <div class="p-6 sm:p-8 rounded-3xl bg-linen border border-stoneBorder space-y-4">
+                <h3 class="font-editorial text-3xl font-bold text-charcoal">What this looks like in practice</h3>
+                <div class="space-y-4 text-base text-charcoal-muted leading-relaxed">
+                  <p>Imagine a daughter living in Seattle whose mother lives in rural Kenya.</p>
+                  <p>Through OBIK Diaspora Care, her mother receives an OBIK Connect tablet configured to provide a simple way to communicate with her family and access agreed support services.</p>
+                  <p>She can make video calls, receive photographs and voice messages, and use the device to reach the appropriate support channels. As the platform develops, she will also be able to interact with voice-enabled features in her preferred language, making the experience more accessible without having to navigate complicated technology.</p>
+                  <p>From Seattle, her daughter can connect through the companion family platform, share messages, arrange calls, and remain involved in agreed aspects of her mother's support.</p>
+                  <p>If her mother needs help arranging a medical appointment, coordinating transport, or attending to an everyday need, the family can engage OBIK to coordinate appropriate local support.</p>
+                  <p>The family remains connected, the older woman retains an active role in decisions about her own life, and OBIK provides the coordination that helps bridge the distance.</p>
+                  <p>The value of this program goes beyond providing a communication device. It creates a dependable connection between families, older adults, and the practical support available within their communities.</p>
+                </div>
+              </div>
+
+              <div class="space-y-4">
+                <h3 class="font-editorial text-3xl font-bold text-charcoal">Who benefits?</h3>
+                <ul class="space-y-3 text-base text-charcoal-muted leading-relaxed">
+                  <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-terracotta" aria-hidden="true"></span><span>Older adults whose children or relatives live in different cities, counties, or countries.</span></li>
+                  <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-terracotta" aria-hidden="true"></span><span>Families in the diaspora seeking a more consistent, dependable way to stay involved in the wellbeing of loved ones back home.</span></li>
+                  <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-terracotta" aria-hidden="true"></span><span>Older adults who would benefit from accessible digital communication and easier connections to local support.</span></li>
+                  <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-terracotta" aria-hidden="true"></span><span>Families who need assistance coordinating everyday services, healthcare arrangements and practical support for older relatives.</span></li>
+                </ul>
+              </div>
+
+              <div class="space-y-5">
+                <h3 class="font-editorial text-3xl font-bold text-charcoal">Partnership opportunities</h3>
+                <div class="space-y-4 text-base text-charcoal-muted leading-relaxed">
+                  <p>OBIK welcomes collaboration with technology manufacturers, software developers, telecommunications providers, diaspora associations, community organizations, healthcare institutions and local service providers.</p>
+                  <p>Partnership opportunities include:</p>
+                </div>
+                <ul class="space-y-3">
+                  <li class="p-5 rounded-2xl border border-stoneBorder bg-alabaster">
+                    <p class="font-semibold text-charcoal">Technology and device partnerships</p>
+                    <p class="text-sm text-charcoal-muted mt-1.5 leading-relaxed">Supporting the development, sourcing, and deployment of senior-friendly OBIK Connect tablets.</p>
+                  </li>
+                  <li class="p-5 rounded-2xl border border-stoneBorder bg-alabaster">
+                    <p class="font-semibold text-charcoal">Digital infrastructure and innovation</p>
+                    <p class="text-sm text-charcoal-muted mt-1.5 leading-relaxed">Collaborating on the development of OBIK's multilingual platform, voice-enabled interaction and accessible digital experiences.</p>
+                  </li>
+                  <li class="p-5 rounded-2xl border border-stoneBorder bg-alabaster">
+                    <p class="font-semibold text-charcoal">Connectivity partnerships</p>
+                    <p class="text-sm text-charcoal-muted mt-1.5 leading-relaxed">Exploring affordable internet and mobile connectivity arrangements for older adults, particularly in underserved communities.</p>
+                  </li>
+                  <li class="p-5 rounded-2xl border border-stoneBorder bg-alabaster">
+                    <p class="font-semibold text-charcoal">Community and service partnerships</p>
+                    <p class="text-sm text-charcoal-muted mt-1.5 leading-relaxed">Building trusted local networks that can respond to practical support needs.</p>
+                  </li>
+                  <li class="p-5 rounded-2xl border border-stoneBorder bg-alabaster">
+                    <p class="font-semibold text-charcoal">Healthcare partnerships</p>
+                    <p class="text-sm text-charcoal-muted mt-1.5 leading-relaxed">Strengthening connections to healthcare providers, appointment coordination, and medical mobility services.</p>
+                  </li>
+                </ul>
+                <p class="text-base text-charcoal-muted leading-relaxed">Through these collaborations, OBIK aims to develop a connected support model that can be adapted to the realities of aging, family life and digital access in Kenya and, over time, across the wider African region.</p>
+                <button type="button" onclick="navigateToContactTopic('01. OBIK Diaspora Care Enquiry')" class="px-6 py-3.5 rounded-xl bg-emerald hover:bg-emerald-dark text-alabaster text-sm font-semibold transition-all">Enquire About Diaspora Care &rarr;</button>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Programme Deep-Dive Sections -->
-      <section class="py-24 lg:py-28 bg-alabaster border-b border-stoneBorder space-y-24">
-        <div class="max-w-7xl mx-auto px-6 lg:px-10 space-y-24">
+      <section id="upkeep" class="prog-anchor prog-detail-card py-20 lg:py-28 bg-linen/55 border-b border-stoneBorder">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10">
+          <div class="grid lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+            <div class="lg:col-span-8 space-y-8 order-2 lg:order-1">
+              <div class="space-y-4">
+                <span class="inline-block px-3.5 py-1 rounded-full bg-terracotta-tint text-terracotta text-xs font-bold uppercase tracking-wider">02</span>
+                <h2 class="font-editorial text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal">OBIK Upkeep &amp; Social Protection</h2>
+                <p class="font-editorial text-2xl sm:text-3xl font-semibold text-emerald leading-snug">Strengthening financial security and independence in later life.</p>
+              </div>
+              <div class="space-y-4 text-base text-charcoal-muted leading-relaxed">
+                <p>Financial insecurity can make growing older particularly difficult. Many older women have little or no reliable income, leaving them dependent on inconsistent family support or struggling to meet their everyday needs.</p>
+                <p>While government social protection programs provide important assistance to eligible older persons, some women remain unreached, struggle to navigate the application process, or find available assistance insufficient to meet their basic needs.</p>
+                <p>OBIK seeks to address these gaps through a combination of social protection navigation and sponsored financial upkeep.</p>
+              </div>
 
-          <!-- Deep-Dive 01: OBIK Diaspora Care -->
-          <div id="prog-detail-diaspora" class="prog-detail-card rounded-3xl bg-linen/45 border border-stoneBorder p-8 sm:p-12 transition-all duration-300">
-            <div class="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-              <div class="lg:col-span-5">
-                <div class="rounded-3xl overflow-hidden aspect-[4/3] bg-emerald shadow-soft border border-stoneBorder img-zoom-wrap">
-                  <img data-photo="prog-diaspora" alt="1. OBIK Diaspora Care" class="w-full h-full object-cover object-top" />
+              <div class="space-y-5">
+                <h3 class="font-editorial text-3xl font-bold text-charcoal">Our approach</h3>
+                <p class="text-base text-charcoal-muted leading-relaxed">The program has two complementary areas of intervention:</p>
+                <div class="space-y-4">
+                  <article class="p-6 sm:p-7 rounded-3xl bg-alabaster border border-stoneBorder shadow-card space-y-4">
+                    <p class="text-xs font-bold uppercase tracking-wider text-terracotta">A</p>
+                    <h4 class="font-editorial text-2xl sm:text-3xl font-bold text-charcoal">Social protection and benefit-access assistance</h4>
+                    <p class="text-base text-charcoal-muted leading-relaxed">OBIK helps older women understand and navigate existing social protection systems, particularly where they may be eligible for government assistance but face barriers accessing it.</p>
+                    <p class="text-base text-charcoal-muted leading-relaxed">This may include:</p>
+                    <ul class="space-y-2.5 text-base text-charcoal-muted leading-relaxed">
+                      <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald" aria-hidden="true"></span><span>Identifying women who may qualify for available social protection benefits.</span></li>
+                      <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald" aria-hidden="true"></span><span>Guiding eligibility requirements and application procedures.</span></li>
+                      <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald" aria-hidden="true"></span><span>Assisting with documentation and connecting women with the relevant government offices.</span></li>
+                      <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald" aria-hidden="true"></span><span>Supporting application follow-ups through appropriate official channels.</span></li>
+                      <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald" aria-hidden="true"></span><span>Working with community organizations and relevant public institutions to improve awareness of available benefits.</span></li>
+                    </ul>
+                    <p class="text-base text-charcoal font-medium leading-relaxed">OBIK does not replace government social protection programs or determine eligibility. Our role is to help women navigate the systems and access assistance for which they may qualify.</p>
+                  </article>
+                  <article class="p-6 sm:p-7 rounded-3xl bg-alabaster border border-stoneBorder shadow-card space-y-4">
+                    <p class="text-xs font-bold uppercase tracking-wider text-terracotta">B</p>
+                    <h4 class="font-editorial text-2xl sm:text-3xl font-bold text-charcoal">Sponsored upkeep allocations</h4>
+                    <div class="space-y-4 text-base text-charcoal-muted leading-relaxed">
+                      <p>For older women who lack reliable income or adequate financial support, OBIK is developing a sponsored upkeep program through which donors, foundations, corporate partners and institutional supporters can contribute towards regular financial allocations.</p>
+                      <p>OBIK will identify and assess eligible women based on their circumstances and support needs, and administer agreed allocations to help meet essential living expenses.</p>
+                      <p>The intention is to provide predictable financial assistance that gives women greater freedom to manage their everyday needs, make personal decisions and maintain a degree of financial independence.</p>
+                    </div>
+                  </article>
                 </div>
               </div>
-              <div class="lg:col-span-7 space-y-5">
-                <span class="inline-block px-3.5 py-1 rounded-full bg-terracotta-tint text-terracotta text-xs font-bold uppercase tracking-wider">
-                  Programme 01
-                </span>
-                <h2 class="font-editorial text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal">
-                  1. OBIK Diaspora Care
-                </h2>
-                <p class="font-editorial text-2xl font-semibold text-emerald">
-                  Bringing trusted support closer, even when families are far away.
-                </p>
+
+              <div class="p-6 sm:p-8 rounded-3xl bg-alabaster border border-stoneBorder space-y-4">
+                <h3 class="font-editorial text-3xl font-bold text-charcoal">What this looks like in practice</h3>
                 <div class="space-y-4 text-base text-charcoal-muted leading-relaxed">
-                  <p>
-                    Distance should not prevent families from ensuring their loved ones receive consistent practical support.
-                  </p>
-                  <p>
-                    OBIK helps diaspora and geographically distant families coordinate everyday assistance for older loved ones back home.
-                  </p>
-                  <p>
-                    Our approach focuses on practical care coordination, household support, wellbeing check-ins, healthcare arrangements and connections to trusted local service providers.
-                  </p>
+                  <p>Consider an older woman living in a rural community who has no dependable source of income and struggles to meet her basic needs.</p>
+                  <p>Through the OBIK Upkeep Fund, she may be assessed and enrolled for sponsored monthly financial assistance, subject to program eligibility and available funding.</p>
+                  <p>A donor or institutional partner can support the upkeep of one woman or contribute towards a group of beneficiaries. OBIK administers the agreed support and maintains appropriate records of allocations and program progress.</p>
+                  <p>Alongside this, OBIK can help women who may qualify for existing government benefits navigate the relevant application processes.</p>
                 </div>
-                <div class="pt-3 flex flex-wrap gap-3">
-                  <button onclick="navigateToContactTopic('01. OBIK Diaspora Care Enquiry')" class="px-6 py-3.5 rounded-xl bg-emerald hover:bg-emerald-dark text-alabaster text-sm font-semibold transition-all">
-                    Enquire About Diaspora Care &rarr;
-                  </button>
+              </div>
+
+              <div class="space-y-4">
+                <h3 class="font-editorial text-3xl font-bold text-charcoal">Who benefits?</h3>
+                <ul class="space-y-3 text-base text-charcoal-muted leading-relaxed">
+                  <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-terracotta" aria-hidden="true"></span><span>Older women with little or no reliable income.</span></li>
+                  <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-terracotta" aria-hidden="true"></span><span>Women experiencing financial insecurity or inadequate family support.</span></li>
+                  <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-terracotta" aria-hidden="true"></span><span>Older women who may qualify for government social protection but face barriers accessing it.</span></li>
+                  <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-terracotta" aria-hidden="true"></span><span>Women whose existing sources of support are insufficient to meet their basic needs.</span></li>
+                </ul>
+              </div>
+
+              <div class="space-y-4">
+                <h3 class="font-editorial text-3xl font-bold text-charcoal">Partnership and funding opportunities</h3>
+                <div class="space-y-4 text-base text-charcoal-muted leading-relaxed">
+                  <p>OBIK invites foundations, philanthropic organizations, corporate partners, diaspora communities, philanthropists, and individual donors to support the upkeep program.</p>
+                  <p>Contributions can help finance regular beneficiary allocations, strengthen social protection navigation, and support outreach to financially vulnerable older women.</p>
                 </div>
+                <button type="button" onclick="navigateToContactTopic('02. OBIK Upkeep & Social Protection Enquiry')" class="px-6 py-3.5 rounded-xl bg-emerald hover:bg-emerald-dark text-alabaster text-sm font-semibold transition-all">Enquire About Upkeep &amp; Protection &rarr;</button>
+              </div>
+            </div>
+            <div class="lg:col-span-4 order-1 lg:order-2 lg:sticky lg:top-28">
+              <div class="rounded-3xl overflow-hidden aspect-[4/3] bg-emerald shadow-soft border border-stoneBorder img-zoom-wrap">
+                <img data-photo="prog-upkeep" alt="An older woman supported through OBIK Upkeep and Social Protection" class="w-full h-full object-cover object-top" />
               </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          <!-- Deep-Dive 02: OBIK Upkeep & Social Protection -->
-          <div id="prog-detail-upkeep" class="prog-detail-card rounded-3xl bg-linen/45 border border-stoneBorder p-8 sm:p-12 transition-all duration-300">
-            <div class="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-              <div class="lg:col-span-7 space-y-5 order-2 lg:order-1">
-                <span class="inline-block px-3.5 py-1 rounded-full bg-terracotta-tint text-terracotta text-xs font-bold uppercase tracking-wider">
-                  Programme 02
-                </span>
-                <h2 class="font-editorial text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal">
-                  02. OBIK Upkeep &amp; Social Protection
-                </h2>
-                <p class="font-editorial text-2xl font-semibold text-emerald">
-                  Strengthening financial security and access to essential support.
-                </p>
-                <div class="space-y-4 text-base text-charcoal-muted leading-relaxed">
-                  <p>
-                    Financial insecurity can significantly affect a woman's ability to live independently as she grows older.
-                  </p>
-                  <p>
-                    OBIK works to improve access to social protection programmes and mobilize resources that provide additional financial assistance to older women experiencing vulnerability.
-                  </p>
-                  <p>
-                    Through benefit-access assistance, sponsored upkeep allocations and community partnerships, we aim to help women access the resources they need for everyday living.
-                  </p>
-                </div>
-                <div class="pt-3 flex flex-wrap gap-3">
-                  <button onclick="navigateToContactTopic('02. OBIK Upkeep & Social Protection Enquiry')" class="px-6 py-3.5 rounded-xl bg-emerald hover:bg-emerald-dark text-alabaster text-sm font-semibold transition-all">
-                    Enquire About Upkeep &amp; Protection &rarr;
-                  </button>
+      <section id="health" class="prog-anchor prog-detail-card py-20 lg:py-28 bg-alabaster border-b border-stoneBorder">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10">
+          <div class="grid lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+            <div class="lg:col-span-4 lg:sticky lg:top-28">
+              <div class="rounded-3xl overflow-hidden aspect-[4/3] bg-emerald shadow-soft border border-stoneBorder img-zoom-wrap">
+                <img data-photo="prog-health" alt="An older woman receiving support to reach healthcare through OBIK" class="w-full h-full object-cover object-top" />
+              </div>
+            </div>
+            <div class="lg:col-span-8 space-y-8">
+              <div class="space-y-4">
+                <span class="inline-block px-3.5 py-1 rounded-full bg-terracotta-tint text-terracotta text-xs font-bold uppercase tracking-wider">03</span>
+                <h2 class="font-editorial text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal">OBIK Health Access &amp; Mobility</h2>
+                <p class="font-editorial text-2xl sm:text-3xl font-semibold text-emerald leading-snug">Making healthcare more accessible, affordable and within reach.</p>
+              </div>
+              <div class="space-y-4 text-base text-charcoal-muted leading-relaxed">
+                <p>Having a healthcare facility nearby does not necessarily mean an older woman can access the care she needs.</p>
+                <p>The cost of consultations, medication, diagnostics and transport can create significant barriers. For women living in rural or underserved communities, distance, mobility limitations and a lack of practical assistance can make accessing healthcare even more difficult.</p>
+                <p>OBIK seeks to improve access to appropriate healthcare by building partnerships with healthcare institutions, licensed insurers and relevant service providers, while addressing the practical challenges that prevent older women from receiving care.</p>
+              </div>
+
+              <div class="space-y-5">
+                <h3 class="font-editorial text-3xl font-bold text-charcoal">Our approach</h3>
+                <p class="text-base text-charcoal-muted leading-relaxed">The program focuses on three complementary areas:</p>
+                <div class="space-y-4">
+                  <article class="p-6 sm:p-7 rounded-3xl bg-linen/70 border border-stoneBorder space-y-4">
+                    <p class="text-xs font-bold uppercase tracking-wider text-terracotta">A</p>
+                    <h4 class="font-editorial text-2xl sm:text-3xl font-bold text-charcoal">Affordable healthcare access</h4>
+                    <div class="space-y-4 text-base text-charcoal-muted leading-relaxed">
+                      <p>OBIK seeks to establish partnerships with licensed insurance providers, hospitals, clinics and other healthcare institutions to explore affordable group-based healthcare arrangements and negotiated access to services.</p>
+                      <p>Rather than expecting every older woman to navigate and finance healthcare independently, OBIK aims to work with institutions to explore arrangements that make appropriate healthcare more accessible to enrolled beneficiaries.</p>
+                      <p>Potential areas of collaboration include:</p>
+                    </div>
+                    <ul class="space-y-2.5 text-base text-charcoal-muted leading-relaxed">
+                      <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald" aria-hidden="true"></span><span>Affordable group medical cover arrangements.</span></li>
+                      <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald" aria-hidden="true"></span><span>Access to outpatient and specialist consultations.</span></li>
+                      <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald" aria-hidden="true"></span><span>Diagnostic services and referrals.</span></li>
+                      <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald" aria-hidden="true"></span><span>Medication access and pharmacy partnerships.</span></li>
+                      <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald" aria-hidden="true"></span><span>Preventive health education and awareness.</span></li>
+                    </ul>
+                    <p class="text-base text-charcoal-muted leading-relaxed">Specific benefits and coverage will depend on the agreements reached with licensed insurers and healthcare providers.</p>
+                  </article>
+                  <article class="p-6 sm:p-7 rounded-3xl bg-linen/70 border border-stoneBorder space-y-4">
+                    <p class="text-xs font-bold uppercase tracking-wider text-terracotta">B</p>
+                    <h4 class="font-editorial text-2xl sm:text-3xl font-bold text-charcoal">Medical transport and mobility</h4>
+                    <div class="space-y-4 text-base text-charcoal-muted leading-relaxed">
+                      <p>For some older women, getting to a healthcare facility is as challenging as paying for the treatment itself.</p>
+                      <p>OBIK aims to coordinate practical medical mobility arrangements for women who experience difficulties accessing healthcare because of transport costs, distance, or mobility challenges.</p>
+                      <p>This may include:</p>
+                    </div>
+                    <ul class="space-y-2.5 text-base text-charcoal-muted leading-relaxed">
+                      <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald" aria-hidden="true"></span><span>Coordinating transport for scheduled medical appointments.</span></li>
+                      <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald" aria-hidden="true"></span><span>Exploring designated medical transport days for communities.</span></li>
+                      <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald" aria-hidden="true"></span><span>Facilitating appointment scheduling and referrals.</span></li>
+                      <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald" aria-hidden="true"></span><span>Coordinating accompaniment where required and available.</span></li>
+                      <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald" aria-hidden="true"></span><span>Supporting return journeys following medical visits.</span></li>
+                    </ul>
+                  </article>
+                  <article class="p-6 sm:p-7 rounded-3xl bg-linen/70 border border-stoneBorder space-y-4">
+                    <p class="text-xs font-bold uppercase tracking-wider text-terracotta">C</p>
+                    <h4 class="font-editorial text-2xl sm:text-3xl font-bold text-charcoal">Health education and awareness</h4>
+                    <div class="space-y-4 text-base text-charcoal-muted leading-relaxed">
+                      <p>Through partnerships with qualified healthcare professionals and institutions, OBIK aims to facilitate health education and awareness initiatives that help older women make informed decisions about their wellbeing.</p>
+                      <p>These may include preventive health education, women's health awareness, appropriate referrals, and access to relevant healthcare information.</p>
+                    </div>
+                  </article>
                 </div>
               </div>
-              <div class="lg:col-span-5 order-1 lg:order-2">
-                <div class="rounded-3xl overflow-hidden aspect-[4/3] bg-emerald shadow-soft border border-stoneBorder img-zoom-wrap">
-                  <img data-photo="prog-upkeep" alt="02. OBIK Upkeep & Social Protection" class="w-full h-full object-cover object-top" />
+
+              <div class="p-6 sm:p-8 rounded-3xl bg-linen border border-stoneBorder space-y-4">
+                <h3 class="font-editorial text-3xl font-bold text-charcoal">What this looks like in practice</h3>
+                <div class="space-y-4 text-base text-charcoal-muted leading-relaxed">
+                  <p>Imagine several older women in a rural community have scheduled hospital appointments in Nairobi but struggle to arrange transport.</p>
+                  <p>Through appropriate healthcare and transport partnerships, OBIK could coordinate designated medical transport days, helping organize collection, appointment schedules, accompaniment where available, and return journeys.</p>
+                  <p>At the institutional level, OBIK could also work with a licensed insurer or healthcare network to explore affordable group healthcare arrangements for enrolled women.</p>
+                  <p>The goal is to make healthcare access more practical and coordinated, rather than leaving older women to navigate every barrier alone.</p>
                 </div>
+              </div>
+
+              <div class="space-y-4">
+                <h3 class="font-editorial text-3xl font-bold text-charcoal">Who benefits?</h3>
+                <ul class="space-y-3 text-base text-charcoal-muted leading-relaxed">
+                  <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-terracotta" aria-hidden="true"></span><span>Older women with limited access to affordable healthcare.</span></li>
+                  <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-terracotta" aria-hidden="true"></span><span>Women who face financial or practical barriers to medical appointments.</span></li>
+                  <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-terracotta" aria-hidden="true"></span><span>Older women in rural and underserved communities.</span></li>
+                  <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-terracotta" aria-hidden="true"></span><span>Women who require assistance navigating healthcare services and referrals.</span></li>
+                </ul>
+              </div>
+
+              <div class="space-y-4">
+                <h3 class="font-editorial text-3xl font-bold text-charcoal">Partnership opportunities</h3>
+                <div class="space-y-4 text-base text-charcoal-muted leading-relaxed">
+                  <p>OBIK welcomes partnerships with licensed insurers, hospitals, clinics, diagnostic centers, pharmacies, transport providers, healthcare professionals and women's health organizations.</p>
+                  <p>These collaborations can help develop affordable healthcare arrangements, improve medical mobility and extend access to appropriate health services.</p>
+                </div>
+                <button type="button" onclick="navigateToContactTopic('03. OBIK Health Access & Mobility Enquiry')" class="px-6 py-3.5 rounded-xl bg-emerald hover:bg-emerald-dark text-alabaster text-sm font-semibold transition-all">Enquire About Health &amp; Mobility &rarr;</button>
               </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          <!-- Deep-Dive 03: OBIK Health Access & Mobility -->
-          <div id="prog-detail-health" class="prog-detail-card rounded-3xl bg-linen/45 border border-stoneBorder p-8 sm:p-12 transition-all duration-300">
-            <div class="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-              <div class="lg:col-span-5">
-                <div class="rounded-3xl overflow-hidden aspect-[4/3] bg-emerald shadow-soft border border-stoneBorder img-zoom-wrap">
-                  <img data-photo="prog-health" alt="03. OBIK Health Access & Mobility" class="w-full h-full object-cover object-top" />
-                </div>
-              </div>
-              <div class="lg:col-span-7 space-y-5">
-                <span class="inline-block px-3.5 py-1 rounded-full bg-terracotta-tint text-terracotta text-xs font-bold uppercase tracking-wider">
-                  Programme 03
-                </span>
-                <h2 class="font-editorial text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal">
-                  03. OBIK Health Access &amp; Mobility
-                </h2>
-                <p class="font-editorial text-2xl font-semibold text-emerald">
-                  Making healthcare easier to access and navigate.
-                </p>
-                <div class="space-y-4 text-base text-charcoal-muted leading-relaxed">
-                  <p>
-                    Access to healthcare involves more than the availability of medical facilities. Affordability, transportation, referrals and practical assistance can all influence whether an older woman receives the care she needs.
-                  </p>
-                  <p>
-                    OBIK works with healthcare institutions, licensed insurance providers and relevant service partners to improve and strengthen healthcare access through institutional partnerships, care coordination and medical mobility, coordinating medical support and facilitating transport for medical appointments.
-                  </p>
-                  <p>
-                    Our approach brings healthcare access and practical mobility together to make navigating healthcare easier for older women.
-                  </p>
-                </div>
-                <div class="pt-3 flex flex-wrap gap-3">
-                  <button onclick="navigateToContactTopic('03. OBIK Health Access & Mobility Enquiry')" class="px-6 py-3.5 rounded-xl bg-emerald hover:bg-emerald-dark text-alabaster text-sm font-semibold transition-all">
-                    Enquire About Health &amp; Mobility &rarr;
-                  </button>
-                </div>
-              </div>
-            </div>
+      <section id="who-benefits" class="prog-anchor py-20 lg:py-28 bg-linen/55 border-b border-stoneBorder">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10">
+          <div class="max-w-3xl space-y-4">
+            <span class="section-label text-terracotta">Who benefits from our programmes?</span>
+            <h2 class="font-editorial text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal">Supporting older women. Strengthening the systems around them.</h2>
           </div>
-
+          <div class="mt-8 max-w-3xl space-y-4 text-base sm:text-lg text-charcoal-muted leading-relaxed">
+            <p>OBIK prioritizes older women, particularly those experiencing financial insecurity, limited access to healthcare, or inadequate family and community support.</p>
+            <p>We recognize that the experience of aging is not the same for every woman. Some need financial assistance, others need help accessing healthcare, and many face several challenges at once.</p>
+            <p>Our programs are designed to respond to these different circumstances while strengthening the support systems around older women.</p>
+            <p class="font-medium text-charcoal">Our priority includes:</p>
+          </div>
+          <ul class="mt-6 grid sm:grid-cols-2 gap-4">
+            <li class="p-5 rounded-2xl bg-alabaster border border-stoneBorder text-base text-charcoal-muted leading-relaxed">Older women with little or no reliable income.</li>
+            <li class="p-5 rounded-2xl bg-alabaster border border-stoneBorder text-base text-charcoal-muted leading-relaxed">Women who lack consistent family or community support.</li>
+            <li class="p-5 rounded-2xl bg-alabaster border border-stoneBorder text-base text-charcoal-muted leading-relaxed">Older women facing barriers to healthcare and medical transport.</li>
+            <li class="p-5 rounded-2xl bg-alabaster border border-stoneBorder text-base text-charcoal-muted leading-relaxed">Women who may be eligible for existing social protection but struggle to access it.</li>
+            <li class="p-5 rounded-2xl bg-alabaster border border-stoneBorder text-base text-charcoal-muted leading-relaxed sm:col-span-2">Older adults whose families live elsewhere and need dependable local support.</li>
+          </ul>
+          <p class="mt-8 max-w-3xl text-base sm:text-lg text-charcoal-muted leading-relaxed">We aim to reach women whose circumstances make them particularly vulnerable to financial insecurity, isolation and limited access to essential services, while respecting their independence, choices and individual needs.</p>
         </div>
       </section>
 
@@ -446,9 +684,9 @@
         <div class="md:col-span-4 space-y-3">
           <h3 class="section-label text-marigold">Our Programmes</h3>
           <ul class="space-y-2.5 text-sm text-alabaster/80">
-            <li><button onclick="navigateToProgramme('diaspora')" class="hover:text-alabaster transition-colors text-left">1. OBIK Diaspora Care</button></li>
-            <li><button onclick="navigateToProgramme('upkeep')" class="hover:text-alabaster transition-colors text-left">02. OBIK Upkeep &amp; Social Protection</button></li>
-            <li><button onclick="navigateToProgramme('health')" class="hover:text-alabaster transition-colors text-left">03. OBIK Health Access &amp; Mobility</button></li>
+            <li><a href="#diaspora" class="hover:text-alabaster transition-colors">01. OBIK Diaspora Care</a></li>
+            <li><a href="#upkeep" class="hover:text-alabaster transition-colors">02. OBIK Upkeep &amp; Social Protection</a></li>
+            <li><a href="#health" class="hover:text-alabaster transition-colors">03. OBIK Health Access &amp; Mobility</a></li>
           </ul>
         </div>
 
@@ -463,5 +701,6 @@
 
 
   <script src="js/site.js"></script>
+  
 </body>
 </html>

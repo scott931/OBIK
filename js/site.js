@@ -605,24 +605,55 @@
     });
 
     document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape') toggleMobileMenu(true);
+      if (event.key === 'Escape') {
+        toggleMobileMenu(true);
+        closePartnerForm();
+      }
     });
+
+    function pathwaySection(key) {
+      return document.getElementById(key) || document.getElementById('prog-detail-' + key);
+    }
 
     function navigateToProgramme(key) {
       if (currentFile() === 'programmes.html') {
         highlightPathway(key);
-        const card = document.getElementById(`prog-detail-${key}`);
-        if (card) card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        const card = pathwaySection(key);
+        if (card) card.scrollIntoView({ behavior: 'smooth', block: 'start' });
         return;
       }
       goToPage('programmes', '?pathway=' + encodeURIComponent(key));
     }
 
+    let partnerFormReturnFocus = null;
+
+    function openPartnerForm() {
+      const modal = document.getElementById('partner-form-modal');
+      if (!modal) return;
+      partnerFormReturnFocus = document.activeElement;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+      modal.scrollTop = 0;
+      const name = document.getElementById('partner-name');
+      if (name) setTimeout(() => name.focus(), 40);
+    }
+
+    function closePartnerForm() {
+      const modal = document.getElementById('partner-form-modal');
+      if (!modal || modal.classList.contains('hidden')) return;
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.style.overflow = '';
+      if (partnerFormReturnFocus && typeof partnerFormReturnFocus.focus === 'function') {
+        partnerFormReturnFocus.focus();
+      }
+      partnerFormReturnFocus = null;
+    }
+
     function navigateToPartnerType(categoryName) {
       if (currentFile() === 'partner.html') {
         selectPartnerCategory(categoryName);
-        const box = document.getElementById('partner-form-box');
-        if (box) box.scrollIntoView({ behavior: 'smooth', block: 'start' });
         return;
       }
       goToPage('partner', '?category=' + encodeURIComponent(categoryName));
@@ -696,20 +727,14 @@
     // =========================================================================
     function highlightPathway(key) {
       document.querySelectorAll('.pathway-btn').forEach((btn) => {
-        if (btn.dataset.pathway === key) {
-          btn.className = 'pathway-btn text-left p-4 rounded-2xl bg-emerald text-alabaster border border-emerald shadow-sm transition-all';
-        } else {
-          btn.className = 'pathway-btn text-left p-4 rounded-2xl bg-linen/70 hover:bg-emerald hover:text-alabaster border border-stoneBorder transition-all';
-        }
+        const isActive = btn.dataset.pathway === key;
+        btn.classList.toggle('is-active', isActive);
+        if (btn.getAttribute('role') === 'tab') btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
       });
 
       document.querySelectorAll('.prog-detail-card').forEach((card) => {
-        card.classList.remove('ring-2', 'ring-terracotta', 'bg-linen');
+        card.classList.toggle('is-active', card.id === key || card.id === 'prog-detail-' + key);
       });
-      const activeCard = document.getElementById(`prog-detail-${key}`);
-      if (activeCard) {
-        activeCard.classList.add('ring-2', 'ring-terracotta', 'bg-linen');
-      }
     }
 
     function selectPartnerCategory(categoryName) {
@@ -720,6 +745,7 @@
       document.querySelectorAll('.partner-card-btn').forEach((btn) => {
         btn.classList.toggle('is-selected', btn.textContent.includes(categoryName));
       });
+      openPartnerForm();
     }
 
     // Change this to the inbox that should receive form messages.
@@ -880,8 +906,13 @@
 
     function bindInboxAddress() {
       document.querySelectorAll('a[href^="mailto:hello@obik.org"], #obik-inbox-link').forEach((link) => {
-        link.href = `mailto:${OBIK_INBOX}`;
+        const raw = link.getAttribute('href') || '';
+        const query = raw.includes('?') ? raw.slice(raw.indexOf('?')) : '';
+        link.href = `mailto:${OBIK_INBOX}${query}`;
         if (link.id === 'obik-inbox-link') link.textContent = OBIK_INBOX;
+      });
+      document.querySelectorAll('[data-obik-inbox]').forEach((field) => {
+        field.value = OBIK_INBOX;
       });
     }
 
@@ -1159,17 +1190,18 @@
 
     function applyPageQuery() {
       const params = new URLSearchParams(location.search);
-      const pathway = params.get('pathway');
-      if (pathway && document.getElementById('page-programmes')) {
+      let pathway = params.get('pathway');
+      if (!pathway && location.hash) {
+        pathway = location.hash.replace('#', '').replace(/^prog-detail-/, '');
+      }
+      if (pathway && document.getElementById('page-programmes') && pathwaySection(pathway)) {
         highlightPathway(pathway);
-        const card = document.getElementById('prog-detail-' + pathway);
-        if (card) setTimeout(() => card.scrollIntoView({ behavior: 'smooth', block: 'center' }), 120);
+        const card = pathwaySection(pathway);
+        if (card) setTimeout(() => card.scrollIntoView({ behavior: 'smooth', block: 'start' }), 120);
       }
       const category = params.get('category');
       if (category && document.getElementById('partner-category')) {
         selectPartnerCategory(category);
-        const box = document.getElementById('partner-form-box');
-        if (box) setTimeout(() => box.scrollIntoView({ behavior: 'smooth', block: 'start' }), 120);
       }
       const topic = params.get('topic');
       if (topic && document.getElementById('contact-topic')) {
